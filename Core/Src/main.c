@@ -108,7 +108,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    WS2812B_SetColor(0, 0, 0, 10);
+    WS2812B_SetColor(0, 0, 0, 5);
+    WS2812B_SetColor(1, 5, 0, 0);
+    WS2812B_SetColor(2, 0, 5, 0);
     WS2812B_Update();
 
     /* USER CODE END WHILE */
