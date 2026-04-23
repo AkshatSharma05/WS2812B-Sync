@@ -1,0 +1,1 @@
+{"led_count": 16, "mode": "Rainbow", "color": [99, 69, 44]}

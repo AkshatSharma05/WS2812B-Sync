@@ -55,9 +55,9 @@ HAL_StatusTypeDef WS2812B_Update(){
     //Fill the DMA buffer with the LED Data
     for ( uint16_t ledIndex = 0; ledIndex < WS2812B_NUM_LEDS; ledIndex++ ){
         //Looping through each bit of data
-        for( uint8_t bitIndex = 0; bitIndex < BITS_PER_LED; bitIndex++ ){
+        for( uint8_t bitIndex = 0; bitIndex < WS2812B_BITS_PER_LED; bitIndex++ ){
             
-            if( WS2812B_LED_DATA[ledIndex].data & 1 << (BITS_PER_LED - 1 - bitIndex) ){
+            if( WS2812B_LED_DATA[ledIndex].data & 1 << (WS2812B_BITS_PER_LED - 1 - bitIndex) ){
              
                 WS2812B_DMA_BUF[bufIndex] = WS2812B_HI_VAL;
             

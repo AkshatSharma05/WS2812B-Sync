@@ -82,14 +82,14 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   /* USER CODE END Init */
-  
+
   /* Configure the system clock */
   SystemClock_Config();
-  
+
   /* USER CODE BEGIN SysInit */
   
   /* USER CODE END SysInit */
-  
+
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
@@ -108,16 +108,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    WS2812B_SetColor(0, 0, 0, 5);
+    WS2812B_SetColor(0, 0, 0, 10);
     WS2812B_SetColor(1, 5, 0, 0);
     WS2812B_SetColor(2, 0, 5, 0);
-    WS2812B_Update();
+    WS2812B_SetColor(3, 0, 0, 10);
+    WS2812B_SetColor(4, 5, 0, 0);
+    WS2812B_SetColor(5, 0, 5, 0);
+    WS2812B_SetColor(6, 0, 0, 10);
+    WS2812B_SetColor(7, 5, 0, 0);
+    WS2812B_SetColor(8, 0, 5, 0);
+    WS2812B_SetColor(9, 0, 0, 10);
+    WS2812B_SetColor(10, 10, 0, 0);
+    
+    WS2812B_Update(); 
 
     /* USER CODE END WHILE */
-    if(HAL_GetTick() - last_blink >= 100){
-        last_blink = HAL_GetTick();
-        HAL_GPIO_TogglePin(LED_INBUILT_GPIO_Port, LED_INBUILT_Pin);
-    }
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

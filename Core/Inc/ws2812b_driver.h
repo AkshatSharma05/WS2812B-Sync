@@ -5,19 +5,17 @@
 #include "stm32f1xx_hal.h"
 
 /// DEFINES
-#define WS2812B_NUM_LEDS        3
+#define WS2812B_NUM_LEDS        11
 
 #define WS2812B_HI_VAL          30  // 0.6us
 #define WS2812B_LO_VAL          15  // 0.3us
 
-#define WS2812B_RST_CYCLES      100  //80us
+#define WS2812B_RST_CYCLES      120  //80us
 
 #define WS2812B_BITS_PER_LED    24 // Three 8-bit channels
 
-#define BITS_PER_LED            24
-
 //The DMA buffer contains the Duty bits. The RST_CYCLES are also added to the buffer so they dont have to be manually passed. 
-#define WS2812B_DMA_BUF_LEN ((WS2812B_NUM_LEDS * BITS_PER_LED) + WS2812B_RST_CYCLES)
+#define WS2812B_DMA_BUF_LEN ((WS2812B_NUM_LEDS * WS2812B_BITS_PER_LED) + WS2812B_RST_CYCLES)
 
 typedef union{
 
