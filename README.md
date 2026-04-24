@@ -83,9 +83,7 @@ HAL_StatusTypeDef WS2812B_Update(void);
 void WS2812B_Callback(void);
 ```
 
-`WS2812B_Update()` guards against double-triggering via a `volatile` flag set by the DMA complete callback.
-
----
+WS2812B_Update() starts a DMA transfer and uses a volatile flag to prevent overlapping transmissions, which is cleared in the DMA completion callback.
 
 
 ## Verification of Signals using an Oscilloscope
