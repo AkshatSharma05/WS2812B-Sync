@@ -92,7 +92,8 @@ WS2812B_Update() starts a DMA transfer and uses a volatile flag to prevent overl
 
 The 24-bit data can be observed in the above image. 
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/16fb52b0-df05-4d06-bbbb-1852be22cfd4" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/045721f2-8b07-49ab-a553-35f8b620ca65" />
+
 
 To further validate bit-level correctness, a test pattern was transmitted by setting the blue channel to 10 (binary: 00001010) while keeping other channels constant.
 
